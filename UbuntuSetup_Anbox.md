@@ -1,11 +1,15 @@
 What I did to get it working on Ubuntu 18.4.3 
 
+### Installing Andbox
 ```
 sudo apt update
 sudo apt upgrade
 snap install --devmode --beta anbox
 ```
-This installed anbox, but it would crash on startup. Found several bug docs on similar issues, but this is the 
+This installed anbox, but it would crash on startup. 
+
+### Troubleshooting Andbox
+Found several bug docs on similar issues, but this is the 
   one that solved my problem (https://github.com/anbox/anbox/issues/364). 
   Note that I toggled back and forth between the beta and edge branches. 
 
@@ -18,6 +22,9 @@ sudo modprobe binder_linux
 
 sudo snap refresh --devmode --beta anbox
 ```
+If you run into secure boot issues, I found these help pages while troubleshooting: (https://github.com/anbox/anbox/issues/1070), (https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1566221)
+
+### Installing playstore
 
 To get the playstore, I found a really nice script (https://github.com/geeks-r-us/anbox-playstore-installer/) 
   and tutorial (https://www.linuxuprising.com/2018/07/anbox-how-to-install-google-play-store.html) that handles this process:
